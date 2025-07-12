@@ -1,0 +1,20 @@
+# Local Netlify folder
+.netlify
+# Node modules
+node_modules/
+# Parcel cache
+.parcel-cache/
+# Build output
+dist/
+# Environment variables
+.env
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp

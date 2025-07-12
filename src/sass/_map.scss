@@ -1,0 +1,114 @@
+@use "base.scss";
+
+.map__section {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  .map {
+    background-color: base.$color-secondary;
+    height: 50rem;
+    width: 50rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .map-error {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 23rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+  .map__section {
+    .map {
+      height: 45rem;
+      width: 45rem;
+    }
+    .map-error {
+      font-size: 2.4rem;
+      text-align: center;
+      padding-top: 20rem;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+  .map__section {
+    .map {
+      height: 43rem;
+      width: 43rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+  .map__section {
+    .map {
+      height: 41rem;
+      width: 41rem;
+    }
+    .map-error {
+      font-size: 2.3rem;
+      text-align: center;
+      padding-top: 18rem;
+    }
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+  .map__section {
+    .map {
+      height: 40rem;
+      width: 40rem;
+    }
+    .map-error {
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 18rem;
+    }
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+  .map__section {
+    .map {
+      height: 38rem;
+      width: 38rem;
+    }
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+  .map__section {
+    .map {
+      height: 30rem;
+      width: 30rem;
+    }
+    .map-error {
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 13rem;
+    }
+  }
+}

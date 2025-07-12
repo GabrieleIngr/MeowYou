@@ -1,0 +1,47 @@
+@use "base.scss";
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 999;
+  background-color: #171717c4;
+  backdrop-filter: blur(10px);
+  width: 21rem;
+  box-shadow: -1px 0 1 base.$color-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: translateX(0);
+  transition: transform 0.4s ease-out;
+  will-change: transform;
+
+  &.hidden {
+    transform: translateX(110%);
+    display: flex !important;
+  }
+
+  .nav__btn-matches {
+    margin-left: 3rem;
+  }
+
+  .matches {
+    margin-top: 20rem;
+
+    visibility: visible;
+    width: 21rem;
+    opacity: 1;
+    position: static;
+    margin-bottom: 20rem;
+    .matches__list {
+      height: 8rem;
+      overflow-y: auto;
+      width: 21rem;
+    }
+    .message p {
+      font-size: 1.3rem;
+    }
+  }
+}

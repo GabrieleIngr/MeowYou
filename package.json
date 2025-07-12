@@ -1,0 +1,19 @@
+{
+  "name": "meowyou",
+  "version": "1.0.0",
+  "description": "cats dating app",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Gabriele Ingrati",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "parcel": "^2.15.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.15.1",
+    "netlify-cli": "^22.1.3"
+  }
+}

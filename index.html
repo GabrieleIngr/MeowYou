@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <link rel="icon" type="image/jpg" href="src/img/favicon.jpg" />
+    <script type="module" src="src/js/controller.js"></script>
+    <title>MeowYou</title>
+  </head>
+  <body>
+    <header class="header container">
+      <nav class="nav">
+        <div class="side-bar hidden">
+          <div class="nav__item">
+            <button class="nav__btn nav__btn-matches sidebar">
+              Your matches
+            </button>
+            <div class="matches hidden ">
+              <div class="matches__list">
+                <div class="message">
+                  <p>No matches yet, start swiping!</p>
+                </div>
+                <div class="preview hidden">
+                  <figure class="preview__fig">
+                    <img src="src/img/test.jpeg" alt="test" />
+                  </figure>
+                  <div class="preview__data">
+                    <h4 class="match__name">Abyss</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav__item">
+            <button class="nav__btn nav__btn--new-matches">
+              Find new matches
+            </button>
+          </div>
+
+          <div class="nav__item">
+            <button class="nav__btn nav__btn-location">Your location</button>
+          </div>
+        </div>
+        <ul class="nav__list">
+          <li class="logo__title">
+            <img src="src/img/logo.png" alt="logo" class="header__logo" />
+            <h1 class="title">MeowYou</h1>
+          </li>
+
+          <li class="sub-container">
+            <div class="nav__item desktop">
+              <button class="nav__btn nav__btn-location">Your location</button>
+            </div>
+            <div class="nav__item desktop">
+              <button class="nav__btn nav__btn--new-matches">
+                Find new matches
+              </button>
+            </div>
+          </li>
+
+          <li class="nav__item desktop">
+            <button class="nav__btn nav__btn-matches">Your matches</button>
+            <div class="matches">
+              <ul class="matches__list">
+                <div class="message ">
+                  <p>No matches yet, start swiping!</p>
+                </div>
+                <li class="preview hidden  ">
+                  <figure class="preview__fig">
+                    <img class="cat-pfp" src="src/img/test.jpeg" alt="test" />
+                  </figure>
+                  <div class="preview__data">
+                    <h4 class="match__name">Abyss</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="hamburger__menu">
+            <img src="src/img/dots.png" alt="mobile-menu" class="hamburger" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="home container  ">
+      <img class="hero__img" src="src/img/cat-love.jpg" alt="Cat couple" />
+      <div class="h1-flex">
+        <h1>Find your Purrfect Match!</h1>
+        <img class="h1_img" src="src/img/paws.png" alt="Cat paws" />
+      </div>
+    </section>
+    <section class="map__section container hidden">
+      <div class="map ">
+        <p class="map-error hidden">Unable to access your location...</p>
+      </div>
+    </section>
+    <section class="find__matches container hidden ">
+      <img class="spinner" src="src/img/Loading_icon.gif" alt="loading" />
+      <div class="cat-error hidden">
+        <img class="cat-error__img" src="src/img/error.png" alt="error" />
+        <h1>No matches are currently available.</h1>
+      </div>
+      <div class="entire-card ">
+        <!--   <article class="cat-card ">
+           <figure class="cat-card__img">
+            <img class="test" src="src/img/test.jpeg" alt="test" />
+            
+          </figure>
+          <div class="cat-card__info">
+            <h2 class="cat-name"></h2>
+            <p class="cat-bio"></p>
+          </div>
+          <div class="cat-card__actions ">
+            <button class="card__btn btn--no">
+              <i class="fa-solid fa-x" style="color: #ff0000;"></i>
+            </button>
+            <button class="card__btn btn--like">
+              <i class="fa-solid fa-heart" style="color: #0cd480;"></i>
+            </button>
+          </div>
+         
+        </article>
+         -->
+      </div>
+    </section>
+  </body>
+</html>
