@@ -18,6 +18,16 @@ const handleCatAction = async function () {
   }
 };
 
+const controlShowMap = async function () {
+  try {
+    const coords = await model._getLocation();
+    mapView._showMap(coords);
+  } catch (err) {
+    console.error("Location error:", err);
+    mapView._showError();
+  }
+};
+
 const controlLike = async function () {
   model._addCat();
   model._removeCat();
@@ -34,6 +44,7 @@ const init = async function () {
   headerView._showHomepage();
   headerView._showMap();
   headerView._showMatches();
+  mapView._mapHandler(controlShowMap);
   sidebarView._showSidebar();
   sidebarView._addClickOutsideListener();
   sidebarView._hideSidebar();
@@ -46,14 +57,6 @@ const init = async function () {
   } catch (err) {
     console.error("🚨 Failed to load cat data:", err);
     matchView._showError();
-  }
-
-  try {
-    const coords = await model._getLocation();
-    mapView._showMap(coords);
-  } catch (err) {
-    console.error("Location error:", err);
-    mapView._showError();
   }
 };
 

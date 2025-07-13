@@ -6,7 +6,7 @@ class sidebarView {
   _sidebarBtns = [
     ...document.querySelectorAll(".nav__btn-location"),
     ...document.querySelectorAll(".nav__btn--new-matches"),
-  ];
+  ]; // Using the spread operator to convert NodeLists into a single array
 
   _resetSidebar() {
     this._matchesList.classList.add("hidden");

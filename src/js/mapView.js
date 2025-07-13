@@ -4,9 +4,11 @@ import "leaflet/dist/leaflet.css";
 class MapView {
   _mapEl = document.querySelector(".map");
   _error = document.querySelector(".map-error");
-
+  _mapButtons = document.querySelectorAll(".nav__btn-location");
+  _mapSection = document.querySelector(".map__section");
   _showMap({ lat, long }) {
-    document.querySelector(".map__section").classList.remove("hidden");
+    if (this._mapSection.classList.contains("hidden")) return; //avoid displaying map over other sections when geolocation is allowed
+    this._mapSection.classList.remove("hidden");
 
     const map = L.map(this._mapEl).setView([lat, long], 13);
 
@@ -24,6 +26,12 @@ class MapView {
       .addTo(map)
       .bindPopup("You are here!")
       .openPopup();
+  }
+
+  _mapHandler(handler) {
+    this._mapButtons.forEach((button) => {
+      button.addEventListener("click", handler);
+    });
   }
 
   _showError() {
