@@ -60,9 +60,4 @@ const init = async function () {
   }
 };
 
-window.addEventListener("beforeunload", function () {
-  //removes matches when the user exits the app
-  localStorage.removeItem("_yourMatches");
-});
-
 init();

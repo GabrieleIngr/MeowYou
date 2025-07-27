@@ -1,13 +1,7 @@
 class AppData {
   _cats = [];
   _yourMatches = [];
-  constructor() {
-    this._init(); //retrieving matches as first thing
-  }
-  _init() {
-    const storage = localStorage.getItem("_yourMatches"); //saving your matches
-    if (storage) this._yourMatches = JSON.parse(storage);
-  }
+
   async _getLocation() {
     return new Promise((resolve, reject) => {
       const success = (pos) => {
